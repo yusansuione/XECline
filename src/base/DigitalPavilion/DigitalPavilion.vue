@@ -24,10 +24,14 @@
 
 <script>
   export default {
-    name: 'companyProfile',
+    name: 'digitalPavilion',
     props: {
       homeSliderData: {
-        type: Array
+        type: Array,
+        default: function(){
+          
+          return new Array[1];
+        }
       }
     }
   }

@@ -22,7 +22,7 @@
   import {swiper, swiperSlide} from 'vue-awesome-swiper'
 
   export default {
-    name: 'partner',
+    name: 'dataVisualization',
     props: {
       partner: {
         type: Array

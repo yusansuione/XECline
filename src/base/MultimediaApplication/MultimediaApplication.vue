@@ -18,7 +18,8 @@
             <p class="row3-item_titleWrap_subtitle">{{Product.EnglishTitle}}</p>
           </div>
           <ul class="row3-item_ul">
-            <li class="cf" v-for="(item,child_index) in Product.item.slice(0,4)">
+            <li class="cf" v-for="(item,child_index) in Product.item.slice(0,4)" 
+           :key="child_index">
               <div class="fl">
                 <div class="row3-item_ul_titleWrap">
                   <span>{{child_index + 1}}.</span>
@@ -50,7 +51,7 @@
 <script>
   const IS_HOVER = 1
   export default {
-    name: 'goodProduct',
+    name: 'multimediaApplication',
     data() {
       return {
         isHover: IS_HOVER,
@@ -118,18 +119,12 @@
       -moz-transform: scale(1.1);
       transform: scale(1.1);
       background: #fff;
-      .row3-item_ul_titleWrap{
-        /*margin-top: 15px;*/
-      }
       .row3-item_titleWrap {
         background-color: rgba(0, 198, 228, 0.9);
         .row3-item_titleWrap_title,
         .row3-item_titleWrap_subtitle {
           color: #fff;
         }
-      }
-      .row3-item_details {
-        /*margin-top: 30px;*/
       }
     }
   }
@@ -262,10 +257,6 @@
   .row3-item_details:hover {
     background-color: #00c1de;
     color: #fff;
-  }
-
-  .row3-item:hover .row3-item_details {
-    /*margin-top: 30px;*/
   }
 
 

@@ -6,6 +6,7 @@
         <ul id="routerWrap">
           <router-link
             @mouseenter.native="addClas(item.name)"
+            @mouseleave.native="remove()"
             @click.native="clilckAddClas($event, item.name)"
             v-for="(item, index) in nav"
             tag="li"
@@ -121,6 +122,9 @@ export default {
   methods: {
     addClas(name) {
       this.nav_active = name;
+    },
+    remove(){
+      this.nav_active="首页";
     },
     clilckAddClas(ev, name) {
       let routes = document

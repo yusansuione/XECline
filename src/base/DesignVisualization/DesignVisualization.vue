@@ -21,7 +21,7 @@
 
 <script>
   export default {
-    name: 'recentNews',
+    name: 'designVisualization',
     data() {
       return {
         qizhui: 'http://www.ncs-cyber.com.cn/CompanyWebsite/',

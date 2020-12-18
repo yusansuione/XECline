@@ -11,52 +11,60 @@
             :options="playerOptions2"
           >
           </video-player>
-          <!-- <h3>1</h3> -->
+          <!-- <dt>1</dt> -->
         </el-carousel-item>
       </el-carousel>
     </div>
     <div>
       <el-row class="row1-item">
-        <el-col :span="4">
+        <el-col :span="5">
           <div class="fl row1-item row1-itemCenter">
-            <h3>创业使命</h3>
-            <p>为客户创造价值</p>
-            <p>为社会创造效益</p>
+            <a href="#">
+              <dl>
+                <dt>数字展馆</dt>
+                <dd>为客户创造价值为社会创造效益</dd>
+              </dl>
+            </a>
+          </div>
+        </el-col>
+        <el-col :span="5">
+          <div class="fl row1-item row1-itemCenter">
+            <a href="#">
+              <dl>
+                <dt>多媒体应用</dt>
+                <dd>为客户创造价值为社会创造效益</dd>
+              </dl>
+            </a>
+          </div>
+        </el-col>
+        <el-col :span="5">
+          <div class="fl row1-item row1-itemCenter">
+            <a href="#">
+              <dl>
+                <dt>设计可视化</dt>
+                <dd>为客户创造价值为社会创造效益</dd>
+              </dl>
+            </a>
+          </div>
+        </el-col>
+        <el-col :span="5">
+          <div class="fl row1-item row1-itemCenter">
+            <a href="#">
+              <dl>
+                <dt>数据可视化</dt>
+                <dd>为客户创造价值为社会创造效益</dd>
+              </dl>
+            </a>
           </div>
         </el-col>
         <el-col :span="4">
           <div class="fl row1-item row1-itemCenter">
-            <h3>创业使命</h3>
-            <p>为客户创造价值</p>
-            <p>为社会创造效益</p>
-          </div>
-        </el-col>
-        <el-col :span="4">
-          <div class="fl row1-item row1-itemCenter">
-            <h3>创业使命</h3>
-            <p>为客户创造价值</p>
-            <p>为社会创造效益</p>
-          </div>
-        </el-col>
-        <el-col :span="4">
-          <div class="fl row1-item row1-itemCenter">
-            <h3>创业使命</h3>
-            <p>为客户创造价值</p>
-            <p>为社会创造效益</p>
-          </div>
-        </el-col>
-        <el-col :span="4">
-          <div class="fl row1-item row1-itemCenter">
-            <h3>创业使命</h3>
-            <p>为客户创造价值</p>
-            <p>为社会创造效益</p>
-          </div>
-        </el-col>
-        <el-col :span="4">
-          <div class="fl row1-item row1-itemCenter">
-            <h3>创业使命</h3>
-            <p>为客户创造价值</p>
-            <p>为社会创造效益</p>
+            <a href="#">
+              <dl>
+                <dt>创新业务</dt>
+                <dd>为客户创造价值为社会创造效益</dd>
+              </dl>
+            </a>
           </div>
         </el-col>
       </el-row>
@@ -181,12 +189,17 @@ export default {
   margin: 10;
 }
 
-.row1-item h3 {
-  font-size: 22px;
-  color: #373d41;
-  text-align: center;
-  margin-top: 19px;
-  margin-bottom: 17px;
+.row1-item dl {
+  float: left;
+  width: 100%;
+  height: 80px;
+  padding: 16px 13px 0 15px;
+  color: #000;
+  text-align: left;
+}
+.row1-item dt {
+ margin-bottom: 5px;
+ font-size: 18px;
 }
 
 .el-carousel__item:nth-child(2n) {
