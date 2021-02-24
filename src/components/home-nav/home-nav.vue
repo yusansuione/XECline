@@ -6,7 +6,6 @@
         <ul id="routerWrap">
           <router-link
             @mouseenter.native="addClas(item.name)"
-            @mouseleave.native="remove()"
             @click.native="clilckAddClas($event, item.name)"
             v-for="(item, index) in nav"
             tag="li"
@@ -144,6 +143,7 @@ export default {
     this.iconLogo = require("common/img/icon-logo.png");
   },
 };
+ 
 </script>
 
 <style scoped lang="scss">

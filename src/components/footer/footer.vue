@@ -8,23 +8,23 @@
         <div class="fl footer-top-mL">
           <div class="footer-top_icon footer-top_location"></div>
           <div class="footer-top_info">
-            <p>北京市朝阳区甲2号院芍药居综合楼</p>
-            <p>天津市华苑产业区海泰绿色产业基地K1-1-60</p>
-            <p>济南市历下区大明湖路96号</p>
+            <p>江西萍乡</p>
+            <p>莲花县良坊镇</p>
+            <p>0001</p>
           </div>
         </div>
         <div class="fl footer-top-mL">
           <div class="footer-top_icon footer-top_phone"></div>
           <div class="footer-top_info">
-            <p>010-84623755</p>
-            <p>022-27237082</p>
-            <p>13176019241</p>
+            <p>010-10086</p>
+            <p>022-1008611</p>
+            <p>18296160100</p>
           </div>
         </div>
         <div class="fl footer-top-mL">
           <div class="footer-top_icon footer-top_email"></div>
           <div class="footer-top_info">
-            <p class="footer-top_emailInfo">gr-hr@ncs-cyber.com.cn</p>
+            <p class="footer-top_emailInfo">wwww.xinyi.pingxiang.com</p>
           </div>
         </div>
         <div class="fl footer-top-mL footer-top_weweima">
@@ -34,7 +34,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>京ICP备09061609号-2 Copyright©1999-2013.欣依数码安全系统有限公司 版权所有</p>
+      <p>京ICP备09061609号-2 Copyright©1999-2021.欣依有限公司 版权所有</p>
     </div>
   </div>
 </template>

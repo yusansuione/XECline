@@ -1,5 +1,5 @@
 <template>
-  <div class="companyProfile" style="height:100%;">
+  <!-- <div class="companyProfile" style="height:100%;">
     <div class="commonWidth cf" style="height:100%;">
       <div class="fl row2-img-wrap"
            :class="'row2-img'+(index+1)"
@@ -14,12 +14,36 @@
             <p>{{item.instruction1}}</p>
             <p>{{item.instruction2}}</p>
             <p>{{item.instruction3}}</p>
-            <!--<input type="button" value="查看详情">-->
+           <input type="button" value="查看详情">
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
+  <div class="c-content">
+      <el-row class="list-wrap">
+        <ul class="c-list" >
+          <li>
+            <video-player
+              class="vjs-custom-skin"
+              ref="videoPlayer"
+              :playsinline="true"
+              :options="playerOptions"
+            >
+            </video-player>
+          </li>
+          <li>
+            <video-player
+              class="vjs-custom-skin"
+              ref="videoPlayer"
+              :playsinline="true"
+              :options="playerOptions"
+            >
+            </video-player>
+          </li>
+        </ul>
+      </el-row>
+    </div>
 </template>
 
 <script>
@@ -32,6 +56,59 @@
           
           return new Array[1];
         }
+      }
+    },
+    data(){
+      return{
+        playerOptions: {
+        playbackRates: [0.5, 1.0, 1.5, 2.0],
+        autoplay: false,
+        muted: false,
+        loop: true,
+        preload: "auto",
+        language: "zh-CN",
+        responsive: true,
+        muted: false,
+        fluid: true,
+        sources: [
+          {
+            type: "video/mp4", // 类型
+            // src: require(""), // url地址
+          },
+        ],
+        // poster: require('./img/1546239235065.png'), // 封面地址
+        notSupportedMessage: "此视频暂无法播放，请稍后再试",
+        controlBar: {
+          timeDivider: true,
+          durationDisplay: true,
+          remainingTimeDisplay: false,
+          fullscreenToggle: true,
+        },
+      },
+      playerOptions2: {
+        autoplay: false,
+        muted: false,
+        loop: true,
+        preload: "auto",
+        language: "zh-CN",
+        responsive: true,
+        muted: false,
+        fluid: true,
+        sources: [
+          {
+            type: "video/mp4", // 类型
+            // src: require("./img/1546239235065.mp4"), // url地址
+          },
+        ],
+        // poster: require('./img/1546239235065.png'), // 封面地址
+        notSupportedMessage: "此视频暂无法播放，请稍后再试",
+        controlBar: {
+          timeDivider: false,
+          durationDisplay: false,
+          remainingTimeDisplay: false,
+          fullscreenToggle: true,
+        },
+      },
       }
     }
   }
@@ -187,4 +264,26 @@
   .row2-img-wrap:hover .bottom {
     display: block;
   }
+  ul.c-list {
+    height: 100%;
+    margin: 0 auto;
+}
+ul {
+    display: block;
+    list-style-type:  none;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+li{
+    width: 657px;
+    height: 305px;
+    float:left;
+    margin-left:20px;
+}
+.c-content{
+  min-width: 1200px;
+}
 </style>

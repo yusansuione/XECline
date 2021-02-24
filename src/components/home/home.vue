@@ -3,7 +3,7 @@
     <scrollBanner_home
       :scrollBanners_home="scrollBanners_home"
     ></scrollBanner_home>
-    <div class="row1">
+    <div id="row1" class="row1">
       <div class="commonWidth">
         <div class="commonTitle">
           <h3>欣依，不仅仅是一家新型公司</h3>
@@ -32,22 +32,22 @@
         </div>
       </div>
     </div>
-    <div class="row2">
+    <div id="row2" class="row2">
       <digitalPavilion :homeSliderData="homeSliderData"></digitalPavilion>
     </div>
-    <div class="row3">
+    <div id="row3" class="row3">
       <multimediaApplication
         :goodProductList="goodProductList"
       ></multimediaApplication>
       <canvas id="Mycanvas"></canvas>
     </div>
-    <div class="row4">
+    <div id="row4" class="row4">
       <designVisualization :recentNews="recentNews"></designVisualization>
     </div>
-    <div class="row5">
+    <div id="row5" class="row5">
       <dataVisualization :partner="partner"></dataVisualization>
     </div>
-    <div class="row5">
+    <div id="row6" class="row6">
       <dataVisualization :partner="partner"></dataVisualization>
     </div>
   </div>
@@ -73,6 +73,7 @@ export default {
       initIndex: 0,
       recentNews: [],
       partner: [],
+      scrollBannerHomeDate :[]
     };
   },
   created() {
@@ -250,13 +251,22 @@ export default {
         }
       });
     },
+     _scrollBannerHome() {
+      api.scrollBannerHome().then((res) => {
+        if (res.success === "true") {
+          const DATA = res.data;
+          this.partner = DATA;
+        }
+      });
+    },
   },
   components: {
-    ScrollBanner_home,
-    RecentNews,
-    Partner,
-    GoodProduct,
-    CompanyProfile,
+   ScrollBanner_home,
+   DataVisualization,
+   DesignVisualization,
+   DigitalPavilion,
+   InnovativeBusiness,
+   MultimediaApplication    
   },
 };
 </script>

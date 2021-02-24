@@ -4,7 +4,7 @@
     <div class="commonWidth">
       <div class="introduce-wrap">
         <div class="commonCategory">
-          <h3>关于XX > xx介绍</h3>
+          <h3>欣依> 欣依介绍</h3>
         </div>
         <section>
           <div class="content" >

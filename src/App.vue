@@ -19,7 +19,6 @@
   import HomeHeader from './components/home-header/home-header'
   import HomeNav from './components/home-nav/home-nav'
   import Footers from './components/footer/footer'
-
   export default {
     name: 'App',
     components: {

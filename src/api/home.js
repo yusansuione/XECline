@@ -25,6 +25,11 @@ let partner = () => {
   return ajax('get', url)
 }
 
+let scrollBannerHome = () => {
+  let url = '/indexPageJson/selectScrollBannerHome.action'
+  return ajax('get', url)
+}
+
 export {getImage,getSliderData,getGoodProduct,getRecentNews,partner}
 
 

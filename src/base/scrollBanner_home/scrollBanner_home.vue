@@ -2,7 +2,7 @@
   <div class="scrollBanner_home">
     <!-- @click="toContactUs" -->
     <div>
-      <el-carousel :interval="4000" type="card" height="400px" trigger="click">
+      <el-carousel :interval="4000" v-for="(item,index) in homeSliderData" :key="index" type="card" height="400px" trigger="click">
         <el-carousel-item>
           <video-player
             class="video-player vjs-custom-skin"
@@ -19,7 +19,7 @@
       <el-row class="row1-item">
         <el-col :span="5">
           <div class="fl row1-item row1-itemCenter">
-            <a href="#">
+            <a href="#row2">
               <dl>
                 <dt>数字展馆</dt>
                 <dd>为客户创造价值为社会创造效益</dd>
@@ -29,7 +29,7 @@
         </el-col>
         <el-col :span="5">
           <div class="fl row1-item row1-itemCenter">
-            <a href="#">
+            <a href="#row3">
               <dl>
                 <dt>多媒体应用</dt>
                 <dd>为客户创造价值为社会创造效益</dd>
@@ -39,7 +39,7 @@
         </el-col>
         <el-col :span="5">
           <div class="fl row1-item row1-itemCenter">
-            <a href="#">
+            <a href="#row4">
               <dl>
                 <dt>设计可视化</dt>
                 <dd>为客户创造价值为社会创造效益</dd>
@@ -49,7 +49,7 @@
         </el-col>
         <el-col :span="5">
           <div class="fl row1-item row1-itemCenter">
-            <a href="#">
+            <a href="#row5">
               <dl>
                 <dt>数据可视化</dt>
                 <dd>为客户创造价值为社会创造效益</dd>
@@ -59,39 +59,12 @@
         </el-col>
         <el-col :span="4">
           <div class="fl row1-item row1-itemCenter">
-            <a href="#">
+            <a href="#row6">
               <dl>
                 <dt>创新业务</dt>
                 <dd>为客户创造价值为社会创造效益</dd>
               </dl>
             </a>
-          </div>
-        </el-col>
-      </el-row>
-    </div>
-
-    <div>
-      <el-row>
-        <el-col :span="12">
-          <div>
-            <video-player
-              class="vjs-custom-skin"
-              ref="videoPlayer"
-              :playsinline="true"
-              :options="playerOptions"
-            >
-            </video-player>
-          </div>
-        </el-col>
-        <el-col :span="12">
-          <div>
-            <video-player
-              class="vjs-custom-skin"
-              ref="videoPlayer"
-              :playsinline="true"
-              :options="playerOptions"
-            >
-            </video-player>
           </div>
         </el-col>
       </el-row>
@@ -102,34 +75,9 @@
 <script>
 export default {
   name: "scrollBanner_home",
-  data() {
-    return {
-      playerOptions: {
-        playbackRates: [0.5, 1.0, 1.5, 2.0],
-        autoplay: false,
-        muted: false,
-        loop: true,
-        preload: "auto",
-        language: "zh-CN",
-        responsive: true,
-        muted: false,
-        fluid: true,
-        sources: [
-          {
-            type: "video/mp4", // 类型
-            // src: require(""), // url地址
-          },
-        ],
-        // poster: require('./img/1546239235065.png'), // 封面地址
-        notSupportedMessage: "此视频暂无法播放，请稍后再试",
-        controlBar: {
-          timeDivider: true,
-          durationDisplay: true,
-          remainingTimeDisplay: false,
-          fullscreenToggle: true,
-        },
-      },
-      playerOptions2: {
+  data(){
+      return{
+         playerOptions2: {
         autoplay: false,
         muted: false,
         loop: true,
@@ -153,7 +101,7 @@ export default {
           fullscreenToggle: true,
         },
       },
-    };
+      }
   },
   props: {
     scrollBanners_home: {
@@ -194,15 +142,23 @@ export default {
   width: 100%;
   height: 80px;
   padding: 16px 13px 0 15px;
-  color: #000;
+  color: rgb(255, 253, 253);
   text-align: left;
 }
 .row1-item dt {
  margin-bottom: 5px;
  font-size: 18px;
 }
+.row1-item{
+  background-color:rgb(71, 106, 170);
+}
 
 .el-carousel__item:nth-child(2n) {
   background-color: #e61919;
 }
+
+.list-wrap {
+    margin-top: 20px;
+}
+
 </style>

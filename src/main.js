@@ -13,6 +13,7 @@ import {Pagination, Carousel, CarouselItem, Message ,Row,Col} from 'element-ui'
 import VideoPlayer from 'vue-video-player'
 import 'vue-video-player/src/custom-theme.css'
 import 'video.js/dist/video-js.css'
+import mock from './mock/mock.js'
  
 Vue.use(VideoPlayer)
 Vue.use(Pagination)
